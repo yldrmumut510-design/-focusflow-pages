@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FocusFlow Privacy Policy — what data we store and how we use it.">
-  <title>Privacy Policy — FocusFlow</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <meta name="description" content="FocusFlow Gizlilik Politikası / Privacy Policy">
+  <title>Gizlilik Politikası — FocusFlow</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
@@ -28,67 +28,182 @@
   <main>
     <div class="container-narrow">
       <header class="page-header">
-        <h1>Privacy Policy</h1>
-        <p class="meta">Last updated: May 2026</p>
+        <h1>Gizlilik Politikası</h1>
+        <p class="subtitle">Privacy Policy</p>
+        <p class="meta">Son güncelleme / Last updated: April 2026</p>
       </header>
 
-      <article class="legal-content">
-        <p>FocusFlow (“we”, “our”, or “the app”) is a productivity app for focus sessions, tasks, and progress tracking. This policy describes what information the app may store and how it is used. We aim to be clear and honest—we do not claim perfect anonymity or military-grade encryption.</p>
+      <div class="lang-switcher">
+        <input type="radio" name="lang" id="lang-tr" checked>
+        <input type="radio" name="lang" id="lang-en">
 
-        <div class="callout">
-          <p><strong>Summary:</strong> FocusFlow has no advertising, no third-party analytics, and we do not sell your personal data.</p>
+        <div class="lang-switch-labels">
+          <label for="lang-tr">Türkçe</label>
+          <label for="lang-en">English</label>
         </div>
 
-        <h2>What data the app stores</h2>
-        <p>Depending on how you use FocusFlow, the app may store:</p>
-        <ul>
-          <li><strong>Tasks and categories</strong> — titles, organization, and related settings you create.</li>
-          <li><strong>Focus and pomodoro history</strong> — session lengths, counts, and statistics derived from your usage.</li>
-          <li><strong>App settings</strong> — preferences such as timer durations, sounds, and display options.</li>
-          <li><strong>Progress and stats</strong> — aggregated views of your focus activity shown in the app.</li>
-        </ul>
+        <article class="legal-content lang-panel-tr">
+          <p>FocusFlow (“biz”, “uygulama”), odaklanma oturumları, görevler ve ilerleme takibi sunan bir üretkenlik uygulamasıdır. Bu politika, hangi bilgilerin saklanabileceğini ve nasıl kullanıldığını açıklar.</p>
 
-        <h2>Local storage</h2>
-        <p>Much of this data is kept on your device using local storage so the app can work offline and respond quickly. Data stored only on your device remains under your control and is removed when you delete the app (unless you also use cloud sync, described below).</p>
+          <div class="callout">
+            <p><strong>Özet:</strong> FocusFlow’da reklam yoktur. Üçüncü taraf analitik veya reklam izleyicisi kullanılmaz. Kişisel verileriniz satılmaz veya pazarlama amacıyla paylaşılmaz.</p>
+          </div>
 
-        <h2>Account sign-in and cloud sync</h2>
-        <p>If you choose to create an account and sign in, FocusFlow uses <strong>Google Firebase</strong> to authenticate you and sync selected app data across your devices. In that case, the same types of data listed above (tasks, categories, focus history, settings, and stats) may be stored on Firebase servers associated with your account.</p>
-        <p>We use Firebase only for authentication and data sync—not for ads or cross-app tracking. Firebase operates under Google’s terms and privacy practices. You can read more at <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">firebase.google.com/support/privacy</a>.</p>
-        <p>If you use the app without signing in, cloud sync does not apply and your data stays on the device for that usage mode.</p>
+          <p class="section-num">01</p>
+          <h2>Genel bakış</h2>
+          <p>FocusFlow, kullanıcı gizliliğine saygı duymayı temel ilke olarak benimser. Bu politika, uygulamamızın hangi verileri topladığını, neden topladığını ve nasıl kullandığını açıklar.</p>
 
-        <h2>Live Activity and notifications</h2>
-        <p>On supported Apple devices, FocusFlow may show your current timer state through Live Activity (Lock Screen / Dynamic Island) and local notifications. These features use timer and session state on your device to display accurate information. They are not used for marketing or advertising.</p>
+          <p class="section-num">02</p>
+          <h2>Toplanan veriler</h2>
+          <p>FocusFlow, uygulamanın çalışması için gerekli olan verileri toplar. Kullanımınıza bağlı olarak şunlar saklanabilir:</p>
+          <ul>
+            <li><strong>E-posta adresi ve şifre</strong> — Hesap oluşturma ve giriş için (Firebase Authentication)</li>
+            <li><strong>Görevler ve kategoriler</strong> — Oluşturduğunuz görevler ve düzenleme bilgileri</li>
+            <li><strong>Pomodoro ve odak geçmişi</strong> — Oturum süreleri, pomodoro sayıları ve odaklanma süreleri</li>
+            <li><strong>Uygulama ayarları</strong> — Zamanlayıcı süreleri, sesler ve görüntüleme tercihleri</li>
+            <li><strong>İlerleme ve istatistikler</strong> — Uygulama içinde gösterilen özet veriler</li>
+            <li><strong>Grup / oda bilgileri</strong> — Katıldığınız grup oturumlarındaki durum (çalışıyor, mola, boşta)</li>
+            <li><strong>Misafir modu verileri</strong> — Yalnızca oturum süresince tutulur; hesaba bağlanmaz</li>
+          </ul>
 
-        <h2>What we do not do</h2>
-        <ul>
-          <li>We do <strong>not</strong> show third-party advertisements in the app.</li>
-          <li>We do <strong>not</strong> use third-party analytics or advertising trackers.</li>
-          <li>We do <strong>not</strong> sell your personal data.</li>
-          <li>We do <strong>not</strong> use your data for unrelated marketing purposes.</li>
-        </ul>
+          <p class="section-num">03</p>
+          <h2>Yerel depolama</h2>
+          <p>Verilerinizin önemli bir kısmı, uygulamanın hızlı ve çevrimdışı çalışması için cihazınızda yerel olarak saklanır. Yalnızca cihazda kalan veriler, uygulamayı silmenizle birlikte kaldırılır (aşağıda açıklanan bulut senkronizasyonu kullanıyorsanız hesap verileri ayrıca geçerlidir).</p>
 
-        <h2>Data security</h2>
-        <p>We rely on platform and Firebase security measures that are standard for mobile apps. Passwords are handled through Firebase Authentication and are not stored by us in plain text. No method of transmission or storage is completely secure; we work to protect your data but cannot guarantee absolute security.</p>
+          <p class="section-num">04</p>
+          <h2>Veriler nasıl kullanılır?</h2>
+          <p>Toplanan veriler yalnızca şu amaçlarla kullanılır:</p>
+          <ul>
+            <li>Hesabınıza güvenli erişim sağlamak</li>
+            <li>Görev ve pomodoro geçmişinizi senkronize etmek</li>
+            <li>Grup odalarında gerçek zamanlı durum paylaşımı</li>
+            <li>Uygulama içi istatistiklerinizi göstermek</li>
+            <li>Live Activity ve bildirimlerde güncel zamanlayıcı durumunu göstermek</li>
+          </ul>
 
-        <h2>Children</h2>
-        <p>FocusFlow is not directed at children under 13, and we do not knowingly collect personal information from children under 13.</p>
+          <p class="section-num">05</p>
+          <h2>Üçüncü taraf hizmetler</h2>
+          <p>Hesap açtığınızda FocusFlow, kimlik doğrulama ve veri senkronizasyonu için <strong>Google Firebase</strong> kullanır:</p>
+          <ul>
+            <li><strong>Firebase Authentication</strong> — Kimlik doğrulama</li>
+            <li><strong>Firebase Realtime Database</strong> — Veri depolama ve senkronizasyon</li>
+          </ul>
+          <p>Firebase’in gizlilik politikasına <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">buradan</a> ulaşabilirsiniz.</p>
+          <div class="callout">
+            <p>Uygulamamızda Google Analytics, reklam ağları veya başka herhangi bir üçüncü taraf izleme aracı kullanılmamaktadır.</p>
+          </div>
+          <p>Hesap oluşturmadan kullanırsanız bulut senkronizasyonu devreye girmez.</p>
 
-        <h2>Your choices</h2>
-        <p>You can stop using cloud sync by signing out or not creating an account. You may delete local app data by removing the app from your device. To request account or cloud data deletion, contact us at the email below and we will help where applicable.</p>
+          <p class="section-num">06</p>
+          <h2>Live Activity ve bildirimler</h2>
+          <p>Desteklenen Apple cihazlarda, FocusFlow mevcut zamanlayıcı durumunuzu Live Activity (Kilit Ekranı / Dynamic Island) ve yerel bildirimler aracılığıyla gösterebilir. Bu özellikler yalnızca zamanlayıcı durumunu yansıtır; pazarlama veya reklam amacıyla kullanılmaz.</p>
 
-        <h2>Changes to this policy</h2>
-        <p>We may update this policy from time to time. The “Last updated” date at the top will change when we do. Continued use of the app after changes means you accept the updated policy.</p>
+          <p class="section-num">07</p>
+          <h2>Veri güvenliği</h2>
+          <p>Verileriniz, mobil uygulamalarda yaygın olan platform ve Firebase güvenlik önlemleriyle korunur. Şifreler Firebase Authentication üzerinden işlenir; düz metin olarak saklanmaz. Hiçbir iletim veya depolama yöntemi tamamen risksiz değildir; verilerinizi korumaya çalışırız ancak mutlak güvenlik garanti edemeyiz.</p>
 
-        <h2>Contact</h2>
-        <p>For privacy questions or requests:</p>
-        <p><a href="mailto:focusflow.uy@gmail.com">focusflow.uy@gmail.com</a></p>
-      </article>
+          <p class="section-num">08</p>
+          <h2>Çocukların gizliliği</h2>
+          <p>FocusFlow, 13 yaşın altındaki çocuklara yönelik değildir ve bu yaş grubundan bilerek kişisel veri toplamaz.</p>
+
+          <p class="section-num">09</p>
+          <h2>Hesap silme ve verilerinize erişim</h2>
+          <p>Hesabınızı ve ilişkili verilerinizi silmek için uygulama içi hesap ayarlarından talep edebilir veya bizimle iletişime geçebilirsiniz. Yerel verileri silmek için uygulamayı cihazınızdan kaldırmanız yeterlidir. Bulut verileri için e-posta ile bize ulaşın.</p>
+
+          <p class="section-num">10</p>
+          <h2>Politika değişiklikleri</h2>
+          <p>Bu gizlilik politikasında yapılacak önemli değişiklikler uygulama içinde veya bu sayfada bildirilebilir. Güncel politikaya her zaman bu sayfadan ulaşabilirsiniz.</p>
+
+          <p class="section-num">11</p>
+          <h2>İletişim</h2>
+          <p>Gizlilikle ilgili sorularınız için:</p>
+          <p><a href="mailto:focusflow.uy@gmail.com">focusflow.uy@gmail.com</a></p>
+        </article>
+
+        <article class="legal-content lang-panel-en">
+          <p>FocusFlow (“we”, “our”, or “the app”) is a productivity app for focus sessions, tasks, and progress tracking. This policy describes what information may be stored and how it is used.</p>
+
+          <div class="callout">
+            <p><strong>Summary:</strong> FocusFlow has no advertisements. We do not use third-party analytics or ad trackers. We do not sell your personal data or share it for marketing purposes.</p>
+          </div>
+
+          <p class="section-num">01</p>
+          <h2>Overview</h2>
+          <p>FocusFlow is committed to respecting your privacy. This policy explains what data our app collects, why we collect it, and how we use it.</p>
+
+          <p class="section-num">02</p>
+          <h2>Data we collect</h2>
+          <p>FocusFlow collects data necessary for the app to function. Depending on how you use the app, we may store:</p>
+          <ul>
+            <li><strong>Email address and password</strong> — For account creation and sign-in (Firebase Authentication)</li>
+            <li><strong>Tasks and categories</strong> — Tasks you create and how you organize them</li>
+            <li><strong>Pomodoro and focus history</strong> — Session lengths, pomodoro counts, and focus durations</li>
+            <li><strong>App settings</strong> — Timer durations, sounds, and display preferences</li>
+            <li><strong>Progress and statistics</strong> — Summaries of your focus activity shown in the app</li>
+            <li><strong>Group / room information</strong> — Your status in group sessions (working, break, idle)</li>
+            <li><strong>Guest mode data</strong> — Held only for the duration of the session; not linked to an account</li>
+          </ul>
+
+          <p class="section-num">03</p>
+          <h2>Local storage</h2>
+          <p>Much of your data is stored locally on your device so the app works quickly and offline. Data kept only on your device is removed when you delete the app (unless you also use cloud sync, described below).</p>
+
+          <p class="section-num">04</p>
+          <h2>How we use your data</h2>
+          <p>Collected data is used solely for:</p>
+          <ul>
+            <li>Providing secure access to your account</li>
+            <li>Syncing your tasks and pomodoro history</li>
+            <li>Real-time status sharing in group rooms</li>
+            <li>Displaying in-app statistics</li>
+            <li>Showing current timer state in Live Activity and notifications</li>
+          </ul>
+
+          <p class="section-num">05</p>
+          <h2>Third-party services</h2>
+          <p>If you create an account, FocusFlow uses <strong>Google Firebase</strong> for authentication and data sync:</p>
+          <ul>
+            <li><strong>Firebase Authentication</strong> — Identity verification</li>
+            <li><strong>Firebase Realtime Database</strong> — Data storage and synchronization</li>
+          </ul>
+          <p>You can review Firebase’s privacy policy <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">here</a>.</p>
+          <div class="callout">
+            <p>Our app does not use Google Analytics, ad networks, or any other third-party tracking tools.</p>
+          </div>
+          <p>If you use the app without signing in, cloud sync does not apply.</p>
+
+          <p class="section-num">06</p>
+          <h2>Live Activity and notifications</h2>
+          <p>On supported Apple devices, FocusFlow may show your current timer through Live Activity (Lock Screen / Dynamic Island) and local notifications. These features reflect timer state only; they are not used for marketing or advertising.</p>
+
+          <p class="section-num">07</p>
+          <h2>Data security</h2>
+          <p>Your data is protected using standard platform and Firebase security measures. Passwords are handled through Firebase Authentication and are not stored in plain text. No method of transmission or storage is completely secure; we work to protect your data but cannot guarantee absolute security.</p>
+
+          <p class="section-num">08</p>
+          <h2>Children’s privacy</h2>
+          <p>FocusFlow is not directed at children under 13 and does not knowingly collect personal information from children under 13.</p>
+
+          <p class="section-num">09</p>
+          <h2>Account deletion and data access</h2>
+          <p>You may request deletion of your account and associated data through in-app account settings or by contacting us. Removing the app from your device deletes local data. For cloud data, email us at the address below.</p>
+
+          <p class="section-num">10</p>
+          <h2>Policy changes</h2>
+          <p>We may update this policy from time to time. Significant changes may be communicated in the app or on this page. The current policy is always available here.</p>
+
+          <p class="section-num">11</p>
+          <h2>Contact</h2>
+          <p>For privacy-related questions:</p>
+          <p><a href="mailto:focusflow.uy@gmail.com">focusflow.uy@gmail.com</a></p>
+        </article>
+      </div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>© 2026 FocusFlow. All rights reserved.</p>
+      <p>© 2026 FocusFlow. Tüm hakları saklıdır. / All rights reserved.</p>
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="support.html">Support</a>
