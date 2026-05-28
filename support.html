@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FocusFlow – Support</title>
+  <style>
+    :root {
+      --accent:   #c97054;
+      --accent2:  #e8a882;
+      --bg:       #f7f3ef;
+      --surface:  #ffffff;
+      --card:     #ffffff;
+      --text:     #2c2018;
+      --muted:    #8a7060;
+      --border:   #e8ddd5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 52px 24px 44px;
+      text-align: center;
+    }
+
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 18px;
+      display: block;
+    }
+
+    .logo-name {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    /* ── Section headings ── */
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .icon {
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    section { margin-bottom: 48px; }
+
+    /* ── Feature cards ── */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+    }
+
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .feature-card .feat-icon { font-size: 22px; margin-bottom: 10px; }
+    .feature-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 5px; color: var(--text); }
+    .feature-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+    /* ── FAQ ── */
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 17px 20px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .faq-question:hover { background: rgba(201,112,84,0.04); }
+
+    .faq-arrow {
+      font-size: 11px;
+      color: var(--accent);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+
+    .faq-answer {
+      display: none;
+      padding: 0 20px 17px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .faq-item.open .faq-answer { display: block; }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 32px;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 13px 28px;
+      border-radius: 50px;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+
+    .contact-email:hover { opacity: 0.85; transform: translateY(-1px); }
+
+    .response-note {
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 28px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      background: var(--surface);
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      header { padding: 36px 20px 28px; }
+      main { padding: 32px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+
+  <!-- App icon recreated as inline SVG -->
+  <svg class="app-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <!-- Rounded-square background -->
+    <rect width="100" height="100" rx="22" ry="22" fill="#c97054"/>
+    <!-- Outer ring -->
+    <circle cx="50" cy="50" r="40" fill="none" stroke="#e8c0a8" stroke-width="5"/>
+    <!-- Clock face -->
+    <circle cx="50" cy="50" r="33" fill="#f7ece0"/>
+    <!-- Tick marks (12 positions) -->
+    <g stroke="#3d2a1e" stroke-width="1.8" stroke-linecap="round">
+      <!-- 12 o'clock -->
+      <line x1="50" y1="19" x2="50" y2="23"/>
+      <!-- 1 -->
+      <line x1="66.5" y1="23.5" x2="64.7" y2="26.6"/>
+      <!-- 2 -->
+      <line x1="77.5" y1="34.5" x2="75" y2="36.2"/>
+      <!-- 3 -->
+      <line x1="81" y1="50" x2="77" y2="50"/>
+      <!-- 4 -->
+      <line x1="77.5" y1="65.5" x2="75" y2="63.8"/>
+      <!-- 5 -->
+      <line x1="66.5" y1="76.5" x2="64.7" y2="73.4"/>
+      <!-- 6 -->
+      <line x1="50" y1="81" x2="50" y2="77"/>
+      <!-- 7 -->
+      <line x1="33.5" y1="76.5" x2="35.3" y2="73.4"/>
+      <!-- 8 -->
+      <line x1="22.5" y1="65.5" x2="25" y2="63.8"/>
+      <!-- 9 -->
+      <line x1="19" y1="50" x2="23" y2="50"/>
+      <!-- 10 -->
+      <line x1="22.5" y1="34.5" x2="25" y2="36.2"/>
+      <!-- 11 -->
+      <line x1="33.5" y1="23.5" x2="35.3" y2="26.6"/>
+    </g>
+    <!-- Hour hand (pointing ~12) -->
+    <line x1="50" y1="50" x2="50" y2="25" stroke="#2c1a0e" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Minute hand (pointing ~1) -->
+    <line x1="50" y1="50" x2="62" y2="62" stroke="#2c1a0e" stroke-width="2.8" stroke-linecap="round"/>
+    <!-- Center cap -->
+    <circle cx="50" cy="50" r="3" fill="#c97054" stroke="#2c1a0e" stroke-width="0.5"/>
+    <!-- Top pin -->
+    <circle cx="50" cy="19.5" r="2" fill="#c97054"/>
+  </svg>
+
+  <div class="logo-name">FocusFlow</div>
+  <p>Pomodoro timer, task management &amp; group study — all in one place.</p>
+</header>
+
+<!-- ── MAIN ── -->
+<main>
+
+  <!-- FEATURES -->
+  <section>
+    <h2><span class="icon">✨</span>What FocusFlow Does</h2>
+    <div class="features">
+      <div class="feature-card">
+        <div class="feat-icon">⏱️</div>
+        <h3>Pomodoro Timer</h3>
+        <p>Customizable focus &amp; break intervals to keep you productive.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">✅</div>
+        <h3>Task Management</h3>
+        <p>Create, schedule, and repeat tasks with daily to-do tracking.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">📊</div>
+        <h3>Analytics</h3>
+        <p>Session history and focus stats to understand your habits.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">👥</div>
+        <h3>Group Study</h3>
+        <p>Real-time study rooms — stay accountable with friends.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">🎵</div>
+        <h3>Ambient Sounds</h3>
+        <p>Lofi, rain, café and more to create the perfect focus environment.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">📱</div>
+        <h3>Works Offline</h3>
+        <p>Installed as a PWA so it works even without an internet connection.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2><span class="icon">❓</span>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        How do I create an account?
+        <span class="faq-arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        Open FocusFlow and tap <strong>Sign Up</strong>. You can register with your e-mail address and a password. Your data is synced via Firebase so it's available across all your devices.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        I forgot my password. How do I reset it?
+        <span class="faq-arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        On the login screen tap <strong>Forgot Password</strong>, enter your e-mail address, and you'll receive a reset link. Check your spam folder if the email doesn't arrive within a few minutes.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        How do I join or create a group study room?
+        <span class="faq-arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        Go to the <strong>Group</strong> tab. Tap <strong>Create Room</strong> to get a 6-character code and share it with friends. To join an existing room, tap <strong>Join Room</strong> and enter the code.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        Can I set recurring tasks?
+        <span class="faq-arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        Yes! When creating a task, enable the <strong>Repeat</strong> option and choose how often it should recur (daily, weekdays, etc.). Editing a recurring task gives you the option to update all future occurrences.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        The ambient sounds are not playing. What should I do?
+        <span class="faq-arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        Make sure your device is not on silent/mute and that the in-app volume is turned up. On iOS, also check that the <strong>Ring/Silent switch</strong> on the side of your device is not muted. If the issue persists, please contact us.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        How do I delete my account and data?
+        <span class="faq-arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        To permanently delete your account and all associated data, please send an e-mail to <strong>focusflow.uy@gmail.com</strong> with the subject line <em>"Account Deletion Request"</em> and the e-mail address linked to your account. We will process your request within 7 business days.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        Is FocusFlow free to use?
+        <span class="faq-arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        Yes, FocusFlow is free to use with all core features available at no cost.
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2><span class="icon">✉️</span>Get in Touch</h2>
+    <div class="contact-card">
+      <p>Can't find what you're looking for? We're happy to help — just send us an email.</p>
+      <a class="contact-email" href="mailto:focusflow.uy@gmail.com">
+        ✉️&nbsp; focusflow.uy@gmail.com
+      </a>
+      <p class="response-note">We typically respond within 1–2 business days.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>© 2026 FocusFlow · <a href="mailto:focusflow.uy@gmail.com">focusflow.uy@gmail.com</a></p>
+</footer>
+
+<script>
+  function toggle(btn) {
+    const item = btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
