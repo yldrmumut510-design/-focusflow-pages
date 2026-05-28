@@ -44,7 +44,7 @@ focusflow.uy@gmail.com
 
 ## Tech
 
-- Plain HTML and CSS
+- Plain HTML and CSS (`css/style.css`)
 - System fonts only
 - No analytics, tracking, or external JavaScript
 - Light/dark mode via `prefers-color-scheme`
