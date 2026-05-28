@@ -371,6 +371,80 @@ main {
   font-size: 15px;
 }
 
+.section-num {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.page-header .subtitle {
+  font-size: 17px;
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+/* Bilingual privacy — CSS-only language toggle */
+.lang-switcher input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.lang-switch-labels {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 40px;
+}
+
+.lang-switch-labels label {
+  padding: 10px 28px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-secondary);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.lang-switch-labels label:first-of-type {
+  border-radius: 980px 0 0 980px;
+}
+
+.lang-switch-labels label:last-of-type {
+  border-radius: 0 980px 980px 0;
+  border-left: none;
+}
+
+#lang-tr:checked ~ .lang-switch-labels label[for="lang-tr"],
+#lang-en:checked ~ .lang-switch-labels label[for="lang-en"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.lang-switcher .lang-panel-en {
+  display: none;
+}
+
+.lang-switcher #lang-en:checked ~ .lang-panel-tr {
+  display: none;
+}
+
+.lang-switcher #lang-en:checked ~ .lang-panel-en {
+  display: block;
+}
+
 /* Support topics */
 .topic-list {
   list-style: none;
