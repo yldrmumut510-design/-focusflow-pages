@@ -7,7 +7,7 @@
   <title>FocusFlow</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-home">
   <header class="site-header">
     <div class="header-inner">
       <a class="logo" href="index.html">
@@ -26,46 +26,74 @@
   </header>
 
   <main>
-    <section class="hero container">
-      <h1>FocusFlow</h1>
-      <p class="tagline">Focus timer, tasks, and progress tracking for deep work.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="privacy.html">Privacy Policy</a>
-        <a class="btn btn-secondary" href="support.html">Support</a>
+    <section class="hero-home" aria-labelledby="hero-heading">
+      <div class="hero-home__glow" aria-hidden="true"></div>
+      <div class="container hero-home__inner">
+        <div class="hero-home__visual" aria-hidden="true">
+          <div class="hero-app-icon">
+            <span>F</span>
+          </div>
+          <div class="hero-ring hero-ring--1"></div>
+          <div class="hero-ring hero-ring--2"></div>
+        </div>
+        <p class="hero-eyebrow">Deep work, simplified</p>
+        <h1 id="hero-heading" class="hero-home__title">FocusFlow</h1>
+        <p class="hero-home__tagline">Focus timer, tasks, and progress tracking—designed for calm, distraction-free work.</p>
+        <div class="hero-pills" role="list">
+          <span class="hero-pill" role="listitem">Pomodoro &amp; tasks</span>
+          <span class="hero-pill" role="listitem">Live Activity</span>
+          <span class="hero-pill" role="listitem">No ads</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="privacy.html">Privacy Policy</a>
+          <a class="btn btn-ghost" href="support.html">Support</a>
+        </div>
       </div>
     </section>
 
-    <section class="section container" aria-labelledby="features-heading">
-      <h2 id="features-heading" class="section-title">Built for focused work</h2>
-      <div class="features">
-        <article class="feature-card">
+    <section class="section-home container" aria-labelledby="features-heading">
+      <div class="section-home__intro">
+        <p class="section-label">Features</p>
+        <h2 id="features-heading" class="section-title-home">Built for focused work</h2>
+        <p class="section-lead">Everything you need to start a session, stay on task, and see progress—without noise.</p>
+      </div>
+      <div class="features-bento">
+        <article class="feature-card feature-card--large">
+          <span class="feature-icon" aria-hidden="true">⏱</span>
           <h3>Focus sessions</h3>
-          <p>Run timed focus sessions with clear start and end states so you can stay in flow without juggling multiple tools.</p>
+          <p>Run timed focus sessions with clear start and end states. Stay in flow without juggling multiple tools.</p>
         </article>
         <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">✓</span>
           <h3>Task-based Pomodoro</h3>
-          <p>Attach pomodoro cycles to your tasks and track how much focused time you spend on what matters.</p>
+          <p>Attach pomodoro cycles to tasks and track focused time on what matters.</p>
         </article>
         <article class="feature-card">
-          <h3>Live Activity support</h3>
-          <p>See your current timer on the Lock Screen and Dynamic Island on supported iPhone models.</p>
+          <span class="feature-icon" aria-hidden="true">◉</span>
+          <h3>Live Activity</h3>
+          <p>See your timer on the Lock Screen and Dynamic Island on supported iPhones.</p>
         </article>
         <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">↗</span>
           <h3>Progress insights</h3>
-          <p>Review focus history and stats over time to understand your habits—not to sell your attention.</p>
+          <p>Review focus history and stats over time—understand habits, not sell attention.</p>
         </article>
-        <article class="feature-card">
-          <h3>Privacy-first approach</h3>
-          <p>No ads, no third-party analytics, and no sale of personal data. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+        <article class="feature-card feature-card--accent">
+          <span class="feature-icon" aria-hidden="true">◇</span>
+          <h3>Privacy-first</h3>
+          <p>No ads, no third-party analytics, no sale of personal data. <a href="privacy.html">Read our policy</a>.</p>
         </article>
       </div>
     </section>
 
     <section class="container" aria-labelledby="contact-heading">
-      <div class="contact-strip">
-        <h2 id="contact-heading">Contact</h2>
-        <p>Questions about the app, privacy, or support? Reach us by email.</p>
-        <p class="email"><a href="mailto:focusflow.uy@gmail.com">focusflow.uy@gmail.com</a></p>
+      <div class="contact-banner">
+        <div class="contact-banner__text">
+          <p class="section-label">Contact</p>
+          <h2 id="contact-heading">Questions or feedback?</h2>
+          <p>Reach out about the app, privacy, or support—we read every message.</p>
+        </div>
+        <a class="btn btn-primary contact-banner__btn" href="mailto:focusflow.uy@gmail.com">focusflow.uy@gmail.com</a>
       </div>
     </section>
   </main>
