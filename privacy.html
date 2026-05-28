@@ -1,407 +1,100 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FocusFlow – Gizlilik Politikası / Privacy Policy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --cream: #F7F0E6;
-      --terracotta: #C4714A;
-      --terracotta-light: #E8977A;
-      --brown-dark: #3D2B1F;
-      --brown-mid: #6B4C38;
-      --brown-light: #A07855;
-      --divider: #D9C9B5;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background: var(--cream);
-      color: var(--brown-dark);
-      font-family: 'Source Serif 4', Georgia, serif;
-      font-weight: 300;
-      line-height: 1.8;
-    }
-
-    /* Subtle grain texture */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.4;
-    }
-
-    .page {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 60px 32px 100px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Header */
-    header {
-      text-align: center;
-      margin-bottom: 64px;
-      padding-bottom: 48px;
-      border-bottom: 1px solid var(--divider);
-    }
-
-    .app-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--terracotta);
-      margin-bottom: 12px;
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(28px, 5vw, 42px);
-      font-weight: 400;
-      color: var(--brown-dark);
-      line-height: 1.25;
-      margin-bottom: 20px;
-    }
-
-    .subtitle {
-      font-size: 14px;
-      color: var(--brown-light);
-      letter-spacing: 0.05em;
-    }
-
-    /* Language toggle */
-    .lang-toggle {
-      display: flex;
-      justify-content: center;
-      gap: 0;
-      margin-bottom: 56px;
-    }
-
-    .lang-btn {
-      padding: 10px 28px;
-      border: 1px solid var(--divider);
-      background: transparent;
-      cursor: pointer;
-      font-family: 'Source Serif 4', serif;
-      font-size: 13px;
-      letter-spacing: 0.08em;
-      color: var(--brown-light);
-      transition: all 0.25s;
-    }
-
-    .lang-btn:first-child { border-radius: 4px 0 0 4px; }
-    .lang-btn:last-child  { border-radius: 0 4px 4px 0; border-left: none; }
-
-    .lang-btn.active {
-      background: var(--terracotta);
-      border-color: var(--terracotta);
-      color: #fff;
-    }
-
-    /* Content sections */
-    .content { display: none; }
-    .content.active { display: block; }
-
-    .section {
-      margin-bottom: 44px;
-      padding-bottom: 44px;
-      border-bottom: 1px solid var(--divider);
-    }
-    .section:last-child { border-bottom: none; }
-
-    .section-num {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--terracotta);
-      margin-bottom: 8px;
-    }
-
-    .section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-weight: 400;
-      color: var(--brown-dark);
-      margin-bottom: 16px;
-      line-height: 1.3;
-    }
-
-    .section p {
-      font-size: 15.5px;
-      color: var(--brown-mid);
-      margin-bottom: 12px;
-    }
-
-    .section p:last-child { margin-bottom: 0; }
-
-    .data-list {
-      list-style: none;
-      margin: 16px 0;
-    }
-
-    .data-list li {
-      font-size: 15px;
-      color: var(--brown-mid);
-      padding: 10px 0 10px 20px;
-      border-bottom: 1px solid var(--divider);
-      position: relative;
-    }
-
-    .data-list li:last-child { border-bottom: none; }
-
-    .data-list li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: var(--terracotta-light);
-      font-size: 12px;
-    }
-
-    .highlight-box {
-      background: rgba(196, 113, 74, 0.07);
-      border-left: 3px solid var(--terracotta);
-      padding: 16px 20px;
-      border-radius: 0 6px 6px 0;
-      margin: 16px 0;
-    }
-
-    .highlight-box p {
-      font-size: 14.5px;
-      color: var(--brown-mid);
-      margin: 0;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      margin-top: 64px;
-      padding-top: 32px;
-      border-top: 1px solid var(--divider);
-    }
-
-    footer p {
-      font-size: 13px;
-      color: var(--brown-light);
-      line-height: 1.7;
-    }
-
-    footer a {
-      color: var(--terracotta);
-      text-decoration: none;
-    }
-
-    footer a:hover { text-decoration: underline; }
-
-    .last-updated {
-      display: inline-block;
-      margin-top: 12px;
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      color: var(--brown-light);
-      opacity: 0.7;
-    }
-
-    @media (max-width: 480px) {
-      .page { padding: 40px 20px 80px; }
-    }
-  </style>
+  <meta name="description" content="FocusFlow Privacy Policy — what data we store and how we use it.">
+  <title>Privacy Policy — FocusFlow</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<div class="page">
-
-  <header>
-    <div class="app-name">FocusFlow</div>
-    <h1>Gizlilik Politikası<br><em style="font-size:0.75em; color:var(--brown-light);">Privacy Policy</em></h1>
-    <p class="subtitle">Son güncelleme / Last updated: April 2026</p>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">F</span>
+        FocusFlow
+      </a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="privacy.html" aria-current="page">Privacy</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="mailto:focusflow.uy@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <div class="lang-toggle">
-    <button class="lang-btn active" onclick="setLang('tr')">Türkçe</button>
-    <button class="lang-btn" onclick="setLang('en')">English</button>
-  </div>
+  <main>
+    <div class="container-narrow">
+      <header class="page-header">
+        <h1>Privacy Policy</h1>
+        <p class="meta">Last updated: May 2026</p>
+      </header>
 
-  <!-- TÜRKÇE -->
-  <div class="content active" id="content-tr">
+      <article class="legal-content">
+        <p>FocusFlow (“we”, “our”, or “the app”) is a productivity app for focus sessions, tasks, and progress tracking. This policy describes what information the app may store and how it is used. We aim to be clear and honest—we do not claim perfect anonymity or military-grade encryption.</p>
 
-    <div class="section">
-      <div class="section-num">01</div>
-      <h2>Genel Bakış</h2>
-      <p>FocusFlow, kullanıcılarının gizliliğine saygı duymayı temel ilke olarak benimser. Bu politika, uygulamamızın hangi verileri topladığını, neden topladığını ve nasıl kullandığını açıklamaktadır.</p>
-      <div class="highlight-box">
-        <p>FocusFlow'da reklam bulunmamaktadır. Verileriniz üçüncü taraflarla paylaşılmaz ve pazarlama amacıyla kullanılmaz.</p>
+        <div class="callout">
+          <p><strong>Summary:</strong> FocusFlow has no advertising, no third-party analytics, and we do not sell your personal data.</p>
+        </div>
+
+        <h2>What data the app stores</h2>
+        <p>Depending on how you use FocusFlow, the app may store:</p>
+        <ul>
+          <li><strong>Tasks and categories</strong> — titles, organization, and related settings you create.</li>
+          <li><strong>Focus and pomodoro history</strong> — session lengths, counts, and statistics derived from your usage.</li>
+          <li><strong>App settings</strong> — preferences such as timer durations, sounds, and display options.</li>
+          <li><strong>Progress and stats</strong> — aggregated views of your focus activity shown in the app.</li>
+        </ul>
+
+        <h2>Local storage</h2>
+        <p>Much of this data is kept on your device using local storage so the app can work offline and respond quickly. Data stored only on your device remains under your control and is removed when you delete the app (unless you also use cloud sync, described below).</p>
+
+        <h2>Account sign-in and cloud sync</h2>
+        <p>If you choose to create an account and sign in, FocusFlow uses <strong>Google Firebase</strong> to authenticate you and sync selected app data across your devices. In that case, the same types of data listed above (tasks, categories, focus history, settings, and stats) may be stored on Firebase servers associated with your account.</p>
+        <p>We use Firebase only for authentication and data sync—not for ads or cross-app tracking. Firebase operates under Google’s terms and privacy practices. You can read more at <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">firebase.google.com/support/privacy</a>.</p>
+        <p>If you use the app without signing in, cloud sync does not apply and your data stays on the device for that usage mode.</p>
+
+        <h2>Live Activity and notifications</h2>
+        <p>On supported Apple devices, FocusFlow may show your current timer state through Live Activity (Lock Screen / Dynamic Island) and local notifications. These features use timer and session state on your device to display accurate information. They are not used for marketing or advertising.</p>
+
+        <h2>What we do not do</h2>
+        <ul>
+          <li>We do <strong>not</strong> show third-party advertisements in the app.</li>
+          <li>We do <strong>not</strong> use third-party analytics or advertising trackers.</li>
+          <li>We do <strong>not</strong> sell your personal data.</li>
+          <li>We do <strong>not</strong> use your data for unrelated marketing purposes.</li>
+        </ul>
+
+        <h2>Data security</h2>
+        <p>We rely on platform and Firebase security measures that are standard for mobile apps. Passwords are handled through Firebase Authentication and are not stored by us in plain text. No method of transmission or storage is completely secure; we work to protect your data but cannot guarantee absolute security.</p>
+
+        <h2>Children</h2>
+        <p>FocusFlow is not directed at children under 13, and we do not knowingly collect personal information from children under 13.</p>
+
+        <h2>Your choices</h2>
+        <p>You can stop using cloud sync by signing out or not creating an account. You may delete local app data by removing the app from your device. To request account or cloud data deletion, contact us at the email below and we will help where applicable.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>We may update this policy from time to time. The “Last updated” date at the top will change when we do. Continued use of the app after changes means you accept the updated policy.</p>
+
+        <h2>Contact</h2>
+        <p>For privacy questions or requests:</p>
+        <p><a href="mailto:focusflow.uy@gmail.com">focusflow.uy@gmail.com</a></p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 FocusFlow. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:focusflow.uy@gmail.com">Contact</a>
       </div>
     </div>
-
-    <div class="section">
-      <div class="section-num">02</div>
-      <h2>Toplanan Veriler</h2>
-      <p>FocusFlow yalnızca uygulamanın çalışması için zorunlu olan verileri toplar:</p>
-      <ul class="data-list">
-        <li><strong>E-posta adresi ve şifre</strong> — Hesap oluşturma ve giriş için (Firebase Authentication)</li>
-        <li><strong>Görev ve pomodoro verileri</strong> — Oluşturduğunuz görevler, pomodoro sayıları ve odaklanma süreleri</li>
-        <li><strong>Grup/oda bilgileri</strong> — Katıldığınız grup oturumlarındaki durum bilgisi (çalışıyor, mola, boşta)</li>
-        <li><strong>Misafir modu verileri</strong> — Yalnızca oturum süresince tutulur, hesaba bağlanmaz</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <div class="section-num">03</div>
-      <h2>Veriler Nasıl Kullanılır?</h2>
-      <p>Topladığımız veriler yalnızca şu amaçlarla kullanılır:</p>
-      <ul class="data-list">
-        <li>Hesabınıza güvenli erişim sağlamak</li>
-        <li>Görev ve pomodoro geçmişinizi senkronize etmek</li>
-        <li>Grup odalarında gerçek zamanlı durum paylaşımı</li>
-        <li>Uygulama içi istatistiklerinizi göstermek</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <div class="section-num">04</div>
-      <h2>Üçüncü Taraf Hizmetler</h2>
-      <p>FocusFlow yalnızca <strong>Google Firebase</strong> altyapısını kullanır:</p>
-      <ul class="data-list">
-        <li><strong>Firebase Authentication</strong> — Kimlik doğrulama</li>
-        <li><strong>Firebase Realtime Database</strong> — Veri depolama ve senkronizasyon</li>
-      </ul>
-      <p>Firebase'in gizlilik politikasına <a href="https://firebase.google.com/support/privacy" style="color:var(--terracotta);">buradan</a> ulaşabilirsiniz.</p>
-      <div class="highlight-box">
-        <p>Uygulamamızda Google Analytics, reklam ağları veya başka herhangi bir üçüncü taraf izleme aracı kullanılmamaktadır.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-num">05</div>
-      <h2>Veri Güvenliği</h2>
-      <p>Verileriniz Firebase altyapısında endüstri standardı güvenlik protokolleriyle korunmaktadır. Şifreleriniz hiçbir zaman düz metin olarak saklanmaz.</p>
-    </div>
-
-    <div class="section">
-      <div class="section-num">06</div>
-      <h2>Çocukların Gizliliği</h2>
-      <p>FocusFlow, 13 yaşın altındaki çocuklara yönelik değildir ve bu yaş grubundan bilerek veri toplamaz.</p>
-    </div>
-
-    <div class="section">
-      <div class="section-num">07</div>
-      <h2>Hesap Silme ve Verilerinize Erişim</h2>
-      <p>Hesabınızı ve tüm ilişkili verilerinizi silmek için uygulama içindeki hesap ayarlarından talep edebilir veya bizimle iletişime geçebilirsiniz. Verileriniz kalıcı olarak silinir.</p>
-    </div>
-
-    <div class="section">
-      <div class="section-num">08</div>
-      <h2>Politika Değişiklikleri</h2>
-      <p>Bu gizlilik politikasında yapılacak önemli değişiklikler uygulama içinde bildirilecektir. Güncel politikaya her zaman bu sayfadan ulaşabilirsiniz.</p>
-    </div>
-
-    <div class="section">
-      <div class="section-num">09</div>
-      <h2>İletişim</h2>
-      <p>Gizlilikle ilgili sorularınız için:</p>
-      <p><a href="mailto:focusflow.uy@gmail.com" style="color:var(--terracotta);">focusflow.uy@gmail.com</a></p>
-    </div>
-
-  </div>
-
-  <!-- ENGLISH -->
-  <div class="content" id="content-en">
-
-    <div class="section">
-      <div class="section-num">01</div>
-      <h2>Overview</h2>
-      <p>FocusFlow is committed to respecting your privacy. This policy explains what data our app collects, why we collect it, and how we use it.</p>
-      <div class="highlight-box">
-        <p>FocusFlow contains no advertisements. Your data is never shared with third parties or used for marketing purposes.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-num">02</div>
-      <h2>Data We Collect</h2>
-      <p>FocusFlow collects only the data strictly necessary for the app to function:</p>
-      <ul class="data-list">
-        <li><strong>Email address and password</strong> — For account creation and login (Firebase Authentication)</li>
-        <li><strong>Task and pomodoro data</strong> — Tasks you create, pomodoro counts, and focus durations</li>
-        <li><strong>Group / room information</strong> — Your status within group sessions (working, break, idle)</li>
-        <li><strong>Guest mode data</strong> — Held only for the duration of the session; not linked to any account</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <div class="section-num">03</div>
-      <h2>How We Use Your Data</h2>
-      <p>Data is used solely for the following purposes:</p>
-      <ul class="data-list">
-        <li>Providing secure access to your account</li>
-        <li>Syncing your task and pomodoro history</li>
-        <li>Real-time status sharing within group rooms</li>
-        <li>Displaying your in-app statistics</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <div class="section-num">04</div>
-      <h2>Third-Party Services</h2>
-      <p>FocusFlow uses only <strong>Google Firebase</strong> infrastructure:</p>
-      <ul class="data-list">
-        <li><strong>Firebase Authentication</strong> — Identity verification</li>
-        <li><strong>Firebase Realtime Database</strong> — Data storage and synchronization</li>
-      </ul>
-      <p>You can review Firebase's privacy policy <a href="https://firebase.google.com/support/privacy" style="color:var(--terracotta);">here</a>.</p>
-      <div class="highlight-box">
-        <p>Our app does not use Google Analytics, ad networks, or any other third-party tracking tools.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-num">05</div>
-      <h2>Data Security</h2>
-      <p>Your data is protected within Firebase infrastructure using industry-standard security protocols. Passwords are never stored in plain text.</p>
-    </div>
-
-    <div class="section">
-      <div class="section-num">06</div>
-      <h2>Children's Privacy</h2>
-      <p>FocusFlow is not directed at children under the age of 13 and does not knowingly collect data from this age group.</p>
-    </div>
-
-    <div class="section">
-      <div class="section-num">07</div>
-      <h2>Account Deletion & Data Access</h2>
-      <p>You may request deletion of your account and all associated data through the account settings within the app, or by contacting us directly. Your data will be permanently removed.</p>
-    </div>
-
-    <div class="section">
-      <div class="section-num">08</div>
-      <h2>Policy Changes</h2>
-      <p>Any significant changes to this privacy policy will be communicated within the app. The current policy is always available on this page.</p>
-    </div>
-
-    <div class="section">
-      <div class="section-num">09</div>
-      <h2>Contact</h2>
-      <p>For privacy-related questions:</p>
-      <p><a href="mailto:focusflow.uy@gmail.com" style="color:var(--terracotta);">focusflow.uy@gmail.com</a></p>
-    </div>
-
-  </div>
-
-  <footer>
-    <p>© 2026 FocusFlow. Tüm hakları saklıdır. / All rights reserved.</p>
-    <span class="last-updated">yldrmumut510-design.github.io/focusflow/privacy.html</span>
   </footer>
-
-</div>
-
-<script>
-  functi
+</body>
+</html>
