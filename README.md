@@ -25,18 +25,18 @@ Then visit `http://localhost:8080`.
 
 ## Publish to GitHub Pages
 
-1. Create a repository named `focusflow-pages` (no leading hyphen).
+1. Repository: `yldrmumut510-design/-focusflow-pages`
 2. Push only the contents of this folder (not the FocusFlow app repo).
 3. On GitHub: **Settings → Pages → Build and deployment → Deploy from branch**
 4. Branch: `main`, folder: `/ (root)`
 5. After a few minutes, the site is live at:
 
-   `https://<username>.github.io/focusflow-pages/`
+   `https://yldrmumut510-design.github.io/-focusflow-pages/`
 
 ## App Store URLs
 
-- Privacy Policy: `https://<username>.github.io/focusflow-pages/privacy.html`
-- Support: `https://<username>.github.io/focusflow-pages/support.html`
+- Privacy Policy: `https://yldrmumut510-design.github.io/-focusflow-pages/privacy.html`
+- Support: `https://yldrmumut510-design.github.io/-focusflow-pages/support.html`
 
 ## Contact
 
